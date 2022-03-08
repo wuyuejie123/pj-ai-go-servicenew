@@ -1,10 +1,15 @@
 package com.ai.pjgo.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * @author hexinxiang
@@ -26,12 +31,13 @@ public class TestCon {
     }
 
 
+    @CrossOrigin(origins = "http://localhost:9527",allowCredentials = "true")
     @RequestMapping("/login")
-    public String test2(String username, String password, HttpServletResponse rsp){
+    public Object login(String username, String password, HttpServletResponse rsp){
 
 
-        String mess="no";
-        String token="0";
+        String mess;
+        String token;
         if (username.equals(password)){
             mess="yes";
             token="123";
@@ -41,6 +47,23 @@ public class TestCon {
         }
 
         rsp.setHeader("token",token);
+        rsp.setHeader("code","20000");
+
+        Map<String,Object> data=new LinkedHashMap<>();
+
+        data.put("data",mess);
+        data.put("roles", Arrays.asList("user","admin"));
+        data.put("name","zhangSan");
+        data.put("introduction","测试前后端通路");
+
+        return data;
+    }
+
+    @RequestMapping("/user/info")
+    public Object getInfo(String token){
+
+        Map<String,Object> mess=new LinkedHashMap<>();
+        mess.put("token",token+new Date().getTime());
 
         return mess;
     }

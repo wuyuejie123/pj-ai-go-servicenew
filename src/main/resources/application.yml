@@ -1,2 +1,16 @@
 server:
   port: 22222
+
+
+management:
+  health:
+    rabbit:
+      # 看着控制台异常费解
+      enabled: false
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 13666
+    username: root
+    url: jdbc:mysql://127.0.0.1:3306/aigo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
