@@ -1,6 +1,5 @@
 package com.ai.pjgo.common.utils;
 
-import cn.hutool.core.util.IdUtil;
 
 /**
  * @author hexinxiang
@@ -15,13 +14,13 @@ public class UidTool {
      *
      * @return UUID
      */
-    public static String get32UUID() {
-
-        String s = IdUtil.simpleUUID();
-
-        return s;
-
-
-    }
+//    public static String get32UUID() {
+//
+//        String s = IdUtil.simpleUUID();
+//
+//        return s;
+//
+//
+//    }
 
 }

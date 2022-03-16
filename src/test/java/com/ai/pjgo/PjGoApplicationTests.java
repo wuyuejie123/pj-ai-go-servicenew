@@ -3,11 +3,15 @@ package com.ai.pjgo;
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+import java.util.Base64;
+
+
 class PjGoApplicationTests {
 
-    @Test
-    void contextLoads() {
-    }
 
+    public static void main(String[] args) {
+
+
+
+    }
 }

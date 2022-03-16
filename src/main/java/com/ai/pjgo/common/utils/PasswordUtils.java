@@ -1,6 +1,7 @@
 package com.ai.pjgo.common.utils;
 
-import cn.hutool.crypto.digest.MD5;
+
+import sun.security.provider.MD5;
 
 /**
  * @author hexinxiang
@@ -18,12 +19,12 @@ public class PasswordUtils {
      * @param pass
      * @return
      */
-    public static String passToMd5Str(String pass){
+//    public static String passToMd5Str(String pass){
+//
+//        return  MD5.create().digestHex(pass+saltValue,edCode);
+//    }
 
-        return  MD5.create().digestHex(pass+saltValue,edCode);
-    }
-
-    public static void main(String[] args) {
-        System.out.println(passToMd5Str("1234"));
-    }
+//    public static void main(String[] args) {
+//        System.out.println(passToMd5Str("1234"));
+//    }
 }

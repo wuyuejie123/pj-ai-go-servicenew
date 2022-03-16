@@ -16,7 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
  */
 
 @Configuration
-public class ConfigWeb extends WebMvcConfigurerAdapter implements WebMvcConfigurer {
+public class ConfigWeb implements WebMvcConfigurer {
 
 
     @Override
