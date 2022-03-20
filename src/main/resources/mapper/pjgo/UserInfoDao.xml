@@ -16,6 +16,8 @@
         <result property="updateTime" column="update_time"/>
         <result property="note" column="note"/>
     </resultMap>
-
+    <!--<update id="updateUserById" parameterType="com.ai.pjgo.entity.UserInfoEntity">
+        update t_user_info set user_name =#{userInfo.}
+    </update>-->
 
 </mapper>

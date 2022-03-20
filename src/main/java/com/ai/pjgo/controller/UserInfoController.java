@@ -4,7 +4,9 @@ import java.util.Arrays;
 import java.util.Map;
 
 //import org.apache.shiro.authz.annotation.RequiresPermissions;
+import com.sun.deploy.net.HttpResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,6 +18,8 @@ import com.ai.pjgo.service.UserInfoService;
 import com.ai.pjgo.common.utils.PageUtils;
 import com.ai.pjgo.common.utils.R;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 
 /**
@@ -70,7 +74,13 @@ public class UserInfoController {
      */
     @RequestMapping("/update")
     //@RequiresPermissions("pjgo:userinfo:update")
-    public R update(@RequestBody UserInfoEntity userInfo){
+    public R update( @RequestBody  UserInfoEntity userInfo){
+
+//        System.out.println("uin=="+uin);
+
+        System.out.println(userInfo+" **");
+
+        System.out.println(userInfo.toString());
 		userInfoService.updateById(userInfo);
 
         return R.ok();

@@ -52,7 +52,7 @@ public class UserInfoEntity implements Serializable {
 	 * 创建时间
 	 */
 	private Date establishTime;
-	/**
+	/**+
 	 * 修改时间
 	 */
 	private Date updateTime;
@@ -61,4 +61,17 @@ public class UserInfoEntity implements Serializable {
 	 */
 	private String note;
 
+	/*
+	* 密码
+	*/
+	private String password;
+	/*phone
+	* */
+	private String phone;
+	/*e-mail
+	* */
+	private String email;
+
+	/*密码加盐*/
+	private String salt;
 }
