@@ -33,4 +33,6 @@ public class ConfigWeb implements WebMvcConfigurer {
                 .maxAge(3600);
 
     }
+
+
 }

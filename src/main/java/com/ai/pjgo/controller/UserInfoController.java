@@ -91,7 +91,7 @@ public class UserInfoController {
      */
     @RequestMapping("/delete")
     //@RequiresPermissions("pjgo:userinfo:delete")
-    public R delete(@RequestBody Integer[] userIds){
+    public R delete(@RequestParam Integer[] userIds){
 		userInfoService.removeByIds(Arrays.asList(userIds));
 
         return R.ok();

@@ -1,16 +1,22 @@
 server:
   port: 22222
 
-
-management:
-  health:
-    rabbit:
-      # 看着控制台异常费解
-      enabled: false
-
 spring:
+
+#  rabbitmq:
+#    virtual-host: /
+#    host: 47.108.74.119
+#    username: rabbitRoot
+#    password: rabbit@Hxx_Wyj_lz@22319
+#    port: 28081
+    #    消息确认配置项
+
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     password: Hxx&Wyj_22-3-8@private
     username: root
     url: jdbc:mysql://rm-bp1h5384h1ot9ztbrfo.mysql.rds.aliyuncs.com:3306/aigo?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+
+  application:
+    name: ai-go-pj-main

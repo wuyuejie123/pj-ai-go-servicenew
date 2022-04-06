@@ -131,6 +131,18 @@
             <version>0.0.1-release</version>
         </dependency>
 
+        <!--spirngboot集成rabbitmq-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+        </dependency>
+
+        <!--实现后端服务推送通知功能,引入WebSocket依赖jar包-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
+
 
     </dependencies>
 
